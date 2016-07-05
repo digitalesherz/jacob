@@ -1,0 +1,143 @@
+$bp-medium: 60em !default;
+@mixin clearfix() {
+    & {
+        &:after,
+        &:before {
+            content: "";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+}
+@font-face {
+    font-family: 'calibrelight';
+    src: url('../fonts/calibre-light.woff2') format('woff2'), url('../fonts/calibre-light.eot') format('eot'), url('../fonts/calibre-light.svg') format('svg'), url('../fonts/calibre-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fugueregular';
+    src: url('../fonts/fugue_regular_2-webfont.woff2') format('woff2'), url('../fonts/fugue_regular_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-size: 22px;
+    font-family: "calibrelight";
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.brand-logo {
+    text-align: center;
+    width: 310px;
+    padding-top: 40vh;
+
+    svg {
+        display: block;
+        margin: 33vh auto 0 auto;
+        max-width: 100px;
+        path {
+            fill: white;
+        }
+    }
+}
+
+nav ul a {
+    line-height: 100vh;
+}
+
+.nav-wrapper {
+    min-height: 800px;
+    min-height: 100vh;
+    background: url("../img/DSC4788.JPG") center/cover no-repeat;
+    a {
+        cursor: default;
+    }
+}
+.intro {
+    padding: 2em 0;
+    background: rgb(43, 175, 144);
+}
+.vita {
+    .chapter {
+        line-height: 10em;
+    }
+    .huberlin {
+        padding: 2em 0;
+        background: rgb(237, 236, 236);
+
+        aside {
+            img {
+                display: block;
+                width: 50%;
+                height: auto;
+                text-align: center;
+                margin: 5em auto;
+            }
+        }
+    }
+    .gapyear {
+        padding-top: 4em;
+    }
+    .lebanon {
+        background: #30404F;
+        color: white;
+
+        header {
+            padding: 4em 0;
+        }
+        main .col {
+            padding: 0 3rem;
+        }
+        main {
+            padding-bottom: 4em;
+        }
+    }
+    .lmu h3 {
+        padding: 8em 3em;
+    }
+}
+footer {
+    .valign-wrapper {
+        background: url("../img/DSC3514.JPG") center/cover no-repeat;
+        min-height: 800px;
+        min-height: 100vh;
+    }
+
+    &.row {
+        margin-bottom: 0;
+    }
+}
+.small {
+    font-size: 1rem;
+}
+.dl--horizontal {
+    margin: 2em auto;
+    @media (min-width: $bp-medium) {
+        dt {
+            clear: left;
+            float: left;
+            overflow: hidden;
+            text-align: right;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 150px;
+        }
+        dd {
+            @include clearfix();
+            margin-left: 165px;
+        }
+    }
+}
+
+
+.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+    line-height: 1.8em;
+}
+.btn, .btn-large, .btn-flat {
+    line-height: 1.95em;
+}
